@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>用七牛云搭建一个属于自己的图床 | 草莓酱的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="前端 数据结构 生活">
+  
+  <meta name="description" content="在使用MarkDown等写东西的时候，图片的引用确实是个让人头疼的，那我们何不来动手搭建一个属于自己的图床吧！">
+<meta name="keywords" content="前端 数据结构 生活">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用七牛云搭建一个属于自己的图床">
+<meta property="og:url" content="http://qxxmx.com/2019/07/25/三步使用七牛云搭建一个属于自己的图床/index.html">
+<meta property="og:site_name" content="草莓酱的博客">
+<meta property="og:description" content="在使用MarkDown等写东西的时候，图片的引用确实是个让人头疼的，那我们何不来动手搭建一个属于自己的图床吧！">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/c9ce41d0/bcddc6e5.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/462059a0/16eab396.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/a30430e6/9ffd5502.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/247a4268/db5ff355.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/79ada542/be4fcc12.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/cb63b739/82996de0.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/732c7ac9/e02575a2.png">
+<meta property="og:updated_time" content="2019-08-11T05:36:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用七牛云搭建一个属于自己的图床">
+<meta name="twitter:description" content="在使用MarkDown等写东西的时候，图片的引用确实是个让人头疼的，那我们何不来动手搭建一个属于自己的图床吧！">
+<meta name="twitter:image" content="http://pic.yupoo.com/1657614410/c9ce41d0/bcddc6e5.png">
+  
+    <link rel="alternate" href="/atom.xml" title="草莓酱的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+
+
+
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="今天也要开心哦">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/个人简历" title
+        
+        >简历</a>
+      
+        <a class="nav-item" href="/TV直播" title
+        
+        >TV直播</a>
+      
+        <a class="nav-item" href="/心情" title
+        
+        >心情</a>
+      
+    </nav>
+  </div>
+  
+  
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-三步使用七牛云搭建一个属于自己的图床" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      用七牛云搭建一个属于自己的图床
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/25/三步使用七牛云搭建一个属于自己的图床/" class="article-date">
+  <time datetime="2019-07-25T13:51:00.000Z" itemprop="datePublished">2019-07-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>在使用MarkDown等写东西的时候，图片的引用确实是个让人头疼的，那我们何不来动手搭建一个属于自己的图床吧！<br> <a id="more"></a></p>
+<h4 id="1-去注册七牛云账号并实名认证-☟"><a href="#1-去注册七牛云账号并实名认证-☟" class="headerlink" title="1.去注册七牛云账号并实名认证 ☟"></a>1.去注册七牛云账号并实名认证 ☟</h4><p>七牛云的实名认证的用户会送有10G的空间，这对于我们自己来做图床是完全足够啦。</p>
+<p>  <a href="https://portal.qiniu.com/signup" target="_blank" rel="noopener">点此前往注册</a><br>  <img src="http://pic.yupoo.com/1657614410/c9ce41d0/bcddc6e5.png"><br>  <strong>注册好之后按照提示进行实名认证</strong><br>  ![mark]<img src="http://pic.yupoo.com/1657614410/462059a0/16eab396.png"> </p>
+<h4 id="2-创建属于你的图床空间"><a href="#2-创建属于你的图床空间" class="headerlink" title="2.创建属于你的图床空间"></a>2.创建属于你的图床空间</h4><p>  <strong>Ⅰ.进入七牛云<a href="https://www.qiniu.com/" target="_blank" rel="noopener">首页</a>点击进入控制台</strong><br>  <img src="http://pic.yupoo.com/1657614410/a30430e6/9ffd5502.png"><br>  <strong>Ⅱ.创建资源，添加“对象存储”</strong><br>  <img src="http://pic.yupoo.com/1657614410/247a4268/db5ff355.png"><br>  <strong>Ⅲ.依次设置【存储空间名称】，【存储区域】，【访问控制】，创建成功以后就会在你的“存储空间列表”中看到你新创建的存储空间了</strong></p>
+<ul>
+<li><p>【存储空间名称】：按照你的个人所好，例如我使用的是【picture】  </p>
+</li>
+<li><p>【存储区域】：建议选择一个离你较近的CDN  </p>
+</li>
+<li><p>【访问控制】：这里必须选择“公开空间”，因为设置为私有空间，图片的外链是无法访问的。  </p>
+<img src="http://pic.yupoo.com/1657614410/79ada542/be4fcc12.png"> 
+
+<p><strong>Ⅳ.进入新创建的存储空间，在【内容管理】中上传你的图片文件，这样就可以使用这个图片的外链了</strong></p>
+<img src="http://pic.yupoo.com/1657614410/cb63b739/82996de0.png"> 
+
+<p><strong>Ⅴ.上传图片文件以后，复制外链连接就可以利用这个链接访问这个图片啦</strong>    </p>
+<img src="http://pic.yupoo.com/1657614410/732c7ac9/e02575a2.png"></li>
+</ul>
+
+      
+    </div>  
+	
+      <footer class="article-footer">
+        完
+      </footer>
+    
+   </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/26/Hexo执行清理命令出现警告DEP0061-1/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Hexo执行清理命令出现警告DEP0061
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/22/关于“看班娘”不兼容问题-1/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">关于“看板娘”不兼容问题</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ5My8yMjAwNQ==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+
+  
+</article>
+</section>
+        <aside id="sidebar">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=210 src="//music.163.com/outchain/player?type=0&id=2887563373&auto=1&height=430"></iframe>
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="今天也要开心哦"></img>
+    <h3 class="avatar-name">
+      
+        草莓酱
+      
+    </h3>
+    <p class="avatar-slogan">
+      热爱可抵岁月漫长
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Inspiration/">Inspiration</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Summary/">Summary</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/02/八月你好/">八月你好</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/01/Hexo—全文阅读的设置/">Hexo—全文阅读的设置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/26/Hexo执行清理命令出现警告DEP0061-1/">Hexo执行清理命令出现警告DEP0061</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/25/三步使用七牛云搭建一个属于自己的图床/">用七牛云搭建一个属于自己的图床</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/22/关于“看班娘”不兼容问题-1/">关于“看板娘”不兼容问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="http://www.google.cn/" title target='_blank'
+        >谷歌</a>
+      
+        <a style="display: block;" href="https://orangexx.github.io/" title target='_blank'
+        >胡桃丐丐</a>
+      
+        <a style="display: block;" href="https://www.xiaomujin.club" title target='_blank'
+        >前端木槿</a>
+      
+        <a style="display: block;" href="https://blog.slomoo.cn/" title target='_blank'
+        >Slomoo Blogs</a>
+      
+        <a style="display: block;" href="http://00m00.com/" title target='_blank'
+        >网址导航</a>
+      
+        <a style="display: block;" href="http://pic.yupoo.com/1657614410/ea911ef6/ed17b6e3.jpg" title target='_blank'
+        >联系博主</a>
+      
+        <a style="display: block;" href="http://wpa.qq.com/msgrd?v=3&uin=1657614410&site=qq&menu=yes" title target='_blank'
+        >申请友链</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?abafaafede97983989cb8c6fb8788409";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+
+  <div class="foot-box global-width style="display: block ！important;">
+    &copy; 2020 李钢 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;草莓酱欢迎阁下光临(๑´∀`๑)
+   
+	<br>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv";> 草莓酱   告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+
+
+
+</div >
+	
+		
+
+	
+  </div>
+ 
+
+  
+  
+  
+  
+</footer>
+
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共{{ totalcount(site) }}字</span>
+</div>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/个人简历" class="mobile-nav-link">简历</a>
+  
+    <a href="/TV直播" class="mobile-nav-link">TV直播</a>
+  
+    <a href="/心情" class="mobile-nav-link">心情</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+  
+  
+  {% if theme.fireworks %}
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+{% endif %}
+  
+  
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

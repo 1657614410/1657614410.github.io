@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>关于“看板娘”不兼容问题 | 草莓酱的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="前端 数据结构 生活">
+  
+  <meta name="description" content="本来前几天就搭建好了博客，后来就是因为“看板娘”不兼容问题整整调了2天多时间，虽然到最后还是没能调好（手动捂脸〃’▽’〃），但是在调试过程中学到了很多知识，话不多说，summary一下。">
+<meta name="keywords" content="前端 数据结构 生活">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于“看板娘”不兼容问题">
+<meta property="og:url" content="http://qxxmx.com/2019/07/22/关于“看班娘”不兼容问题-1/index.html">
+<meta property="og:site_name" content="草莓酱的博客">
+<meta property="og:description" content="本来前几天就搭建好了博客，后来就是因为“看板娘”不兼容问题整整调了2天多时间，虽然到最后还是没能调好（手动捂脸〃’▽’〃），但是在调试过程中学到了很多知识，话不多说，summary一下。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/c015d86a/5241e63d.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/af4b1615/252de1be.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/463f3d28/090db2da.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/588a3bdf/bde48185.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/809d2a07/0bf2a588.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/6322a326/5d9ce4a3.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/113d3e34/8f47597b.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/58d86f19/ef8de2a3.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/cbfab5ff/58238264.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/f4c64727/d5db4d48.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/6714cbb6/4f4ea89e.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/1844f243/7512d205.png">
+<meta property="og:image" content="http://pic.yupoo.com/1657614410/a58f7362/e7a93442.png">
+<meta property="og:updated_time" content="2019-08-11T05:33:46.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于“看板娘”不兼容问题">
+<meta name="twitter:description" content="本来前几天就搭建好了博客，后来就是因为“看板娘”不兼容问题整整调了2天多时间，虽然到最后还是没能调好（手动捂脸〃’▽’〃），但是在调试过程中学到了很多知识，话不多说，summary一下。">
+<meta name="twitter:image" content="http://pic.yupoo.com/1657614410/c015d86a/5241e63d.png">
+  
+    <link rel="alternate" href="/atom.xml" title="草莓酱的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+</head>
+</html>
+
+
+
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="今天也要开心哦">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/个人简历" title
+        
+        >简历</a>
+      
+        <a class="nav-item" href="/TV直播" title
+        
+        >TV直播</a>
+      
+        <a class="nav-item" href="/心情" title
+        
+        >心情</a>
+      
+    </nav>
+  </div>
+  
+  
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-关于“看班娘”不兼容问题-1" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      关于“看板娘”不兼容问题
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/07/22/关于“看班娘”不兼容问题-1/" class="article-date">
+  <time datetime="2019-07-22T13:10:00.000Z" itemprop="datePublished">2019-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>本来前几天就搭建好了博客，后来就是因为“看板娘”不兼容问题整整调了2天多时间，虽然到最后还是没能调好（手动捂脸〃’▽’〃），但是在调试过程中学到了很多知识，话不多说，summary一下。<br> <a id="more"></a></p>
+<h4 id="1-问题的发现"><a href="#1-问题的发现" class="headerlink" title="1.问题的发现"></a>1.问题的发现</h4><p>在安装完“看板娘”插件之后（安装方法之后会更新的哈･ω･），在部署三连之后发现主页底部的不蒜子计数不见了。<br>本来理应是这样![mark]<img src="http://pic.yupoo.com/1657614410/c015d86a/5241e63d.png"><br>但是安装完live2d插件之后，正常显示了超可爱的“看板娘”![mark]<img src="http://pic.yupoo.com/1657614410/af4b1615/252de1be.png"><br>但是之后我在进网页发现底部“不蒜子”计数不见了<img src="http://pic.yupoo.com/1657614410/463f3d28/090db2da.png"><br>而且每篇博客上面的本文阅读量也跟着不见了![mark]<img src="http://pic.yupoo.com/1657614410/588a3bdf/bde48185.png"><br>一开始没有想到是“看板娘”不兼容引发的问题。<br>以为是网页加载的问题，边重复了多次部署三连以及换浏览器打开博客页面，但还是没有什么用，但我发现并不是不显示，就是刚打开博客的一瞬间会显示一下，然后就立刻消失了，也就是说“不蒜子”还是存在并正常运行的。想到这，我便去百度谷歌搜相关问题以及在那些技术群里问，有一个网友跟我说，这是“不蒜子”渲染之后立刻隐藏了。我按照这个思路，改了好多次还是没用。<br>在此期间，想过换其他的统计方式，随机加入了百度统计，挺好使的哈(｡･ω･｡)![mark]<img src="http://pic.yupoo.com/1657614410/809d2a07/0bf2a588.png"><br>但这并不能代替“不蒜子”那些功能。还是选择继续调试……  </p>
+<h4 id="2-神奇的-F12-｀・ω・´"><a href="#2-神奇的-F12-｀・ω・´" class="headerlink" title="2.神奇的 F12 (｀・ω・´)"></a>2.神奇的 F12 (｀・ω・´)</h4><p>☞ <em>开发者工具中主要功能简单来说可以帮助开发者调试js和根据页面元素快速定位，确认请求相应时间和相应内容等，根据内容进行程序调优用。</em>   </p>
+<p>之前所尝试过得方法也仅仅停留在博客文件即表面，居然没有想到<strong>F12</strong>这一重要操作，毕竟是运行在网页之上的嘛，网页显示类问题在F12中还是能找到点所以然的。<br>果然在开发者工具里面发现了![mark]<img src="http://pic.yupoo.com/1657614410/6322a326/5d9ce4a3.png"><br>本来文件配置里是没有style=”display: none;这项的，我把none改为block之后，页面就显示正常了<img src="http://pic.yupoo.com/1657614410/113d3e34/8f47597b.png"><br>这时天真的以为这就改好了，刷新网页之后发现还是原状态（手动捂脸），一查才知道<strong>F12又叫做“检查”，只能调试页面的样式，不会改变逻辑代码。</strong><br>灰溜溜的重新看起了开发者工具里面的代码，很快注意到下style栏有个警示△（上图以标）鼠标附上去显示着invalid property value（无效的属性值），看到着便把none改了回来。之后注意到下面的style栏中有项element □style=display: none，我把前面的对号去掉之后，如图  ☟<img src="http://pic.yupoo.com/1657614410/58d86f19/ef8de2a3.png"><br>“不蒜子”正常显示了，当然前面说了这仅仅只能改变页面样式而已，但我在想是不是跟element □style=display: none有关，随即，自己查了下写的样式里面都没有出现与这个相匹配的内容，就连element.style都没有，但我试着把这里的属性给勾选取消，结果网页就恢复正常了，现在基本可以确定就是因为这个问题导致bug的出现……</p>
+<h4 id="3-！important"><a href="#3-！important" class="headerlink" title="3.！important"></a>3.！important</h4><p>☛ <em>提高指定CSS样式规则的应用优先权。</em> </p>
+<p>然而，这个element.style到底是什么？为什么因为这个东西会导致Bug?  </p>
+<p>我上网查了下，发现这个element.style是内联样式或者是js改写代码之后所留下的，刚才说过，内联样式没有这方面的东西那么，就只剩下js了，我先检查了自己写的js，没问题，再一看下footer.ejs于是，我只能用最笨的办法，修改下面的“不蒜子”的代码里面的样式参数，我发现，根据这里的修改，那个element.style里面的值还是none，根本无法改变。<br>现在问题原因弄明白了，那么怎么解决呢？element.style根本就不存在啊。<br>这时网上查询element.style时get√到一样东西☞<strong>！important</strong><br>没错，这个东西的作用就是提高指定CSS样式规则的应用优先权。<br>也就是说：这个东西可以覆盖掉element.style里面的属性<br>直接在要覆盖的样式后面加上！important。<br>于是开始如下尝试，先采用直接加上对于样式和！important，发现根本没有用，随后我便想是不是用div把“不蒜子”给拿出来试试看<img src="http://pic.yupoo.com/1657614410/cbfab5ff/58238264.png"><br>很保险的每个位置都加了样式<img src="http://pic.yupoo.com/1657614410/f4c64727/d5db4d48.png"><br>结果页面显示是显示了但却不计数了<br><img src="http://pic.yupoo.com/1657614410/6714cbb6/4f4ea89e.png"><br>一脸懵逼(｀・ω・´)<br>这里还有一种可以通过ID去定位元素既通过JavaScript修改页面元素属性来定位的方法。详细的这里就不作叙述了可请移步<br><a href="https://www.cnblogs.com/imyalost/p/8948458.html" target="_blank" rel="noopener">参考资料</a></p>
+<h4 id="4-重新思考"><a href="#4-重新思考" class="headerlink" title="4.重新思考"></a>4.重新思考</h4><p>在调试了整整两天之后，我重新梳理整个过程，并没有像之前那样盲目的急于进行调试，这时才真正才找原因，八成就是“看板娘”兼容造成的，随机我去主题的_config.yml配置文件把“看板娘”给关闭了，果然不出所料，页面一切正常了，改显示的都显示了，之前的element.style默认的也是inline。<br>知道具体原因后向“不蒜子”官方群反应和百度谷歌搜索也没得到任何相对应的解决方案。之后便放弃了“不蒜子”显示，选择我们可爱的“看板娘”(◕ᴗ◕✿)。不过也仅仅只是不显示，它在后台还是在运行的，按F12便可查看。</p>
+<hr>
+<p>虽然最后问题没有得到完美的解决，但这个寻找答案的过程使我受益匪浅。<br>正所谓☞   </p>
+<p>　　<strong>解决问题的能力，程序员立业之本。</strong></p>
+<ul>
+<li><p><strong>要学会主动尝试解决问题</strong><br>☆关于各类问题的解决，解决办法总是能找到，就看你是否足够耐心去寻求解决方案。  </p>
+</li>
+<li><p><strong>要学会科学提问</strong><br>☆在遇到问题时也问了不少人，这其中也有许多需要学习的地方，这里引用到自己比较喜欢的Eric Steven Raymond的《How To Ask Questions The Smart Way》几段话<br>详情如下 ☟</p>
+<img src="http://pic.yupoo.com/1657614410/1844f243/7512d205.png">  
+当然礼貌也是十分重要的  ☟<img src="http://pic.yupoo.com/1657614410/a58f7362/e7a93442.png"> 
+</li>
+<li><p><strong>要学会经验总结</strong>   </p>
+</li>
+</ul>
+<p>☆我们日常遇到的问题就类似打怪升级一样，你解决的问题越多你的能力就会越强，经验自然也会越来越丰富。但人的脑袋不可能记住所有事情，将自己遇到的问题沉淀下来对以后自己查阅也有很大的帮助，就不必每次都要去Google，自己也能够有一个索引库。经常自己总结，正所谓 ：  </p>
+<pre><code><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">出入之间，境界始大。不仅收其精微，汇其宏阔，且人情与道理兼具，生气同高致并存。入而不出，狭隘;出而不入，浮浅。故善学者，善于深思与总结。学习如此，创作如此，生活亦如此。</span><br></pre></td></tr></table></figure></div></code></pre><p>   经过这次调试，发现自己需要学习的东西还有很多很多，希望最后谢谢大家能看到这里，所述问题如有解决方案欢迎指导。<br>　　不早了，溜了溜了（期待下次能带着解决方案回来更新(o°ω°o))</p>
+<pre><code>迈出一小步之后稍停片刻看看学到了什么,不要盲目学习，而要善于总结反思。成长=经验+反思!</code></pre><hr>
+<p>  2019/7/24☞更新<br>  上述问题已得到完美解决(｡･ω･｡)，超开心<br>  因为对一些知识还不是太熟悉，等系统学习完之后，我会继续回来更新来提供详细的解决方案……ヾ(●´∀｀●)<br>  bye-bye！</p>
+
+      
+    </div>  
+	
+      <footer class="article-footer">
+        完
+      </footer>
+    
+   </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/25/三步使用七牛云搭建一个属于自己的图床/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            用七牛云搭建一个属于自己的图床
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/07/22/缘起/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">缘起</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTQ5My8yMjAwNQ==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+  
+
+  
+</article>
+</section>
+        <aside id="sidebar">
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=210 src="//music.163.com/outchain/player?type=0&id=2887563373&auto=1&height=430"></iframe>
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.webp" title="今天也要开心哦"></img>
+    <h3 class="avatar-name">
+      
+        草莓酱
+      
+    </h3>
+    <p class="avatar-slogan">
+      热爱可抵岁月漫长
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Inspiration/">Inspiration</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Summary/">Summary</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/02/八月你好/">八月你好</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/01/Hexo—全文阅读的设置/">Hexo—全文阅读的设置</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/26/Hexo执行清理命令出现警告DEP0061-1/">Hexo执行清理命令出现警告DEP0061</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/25/三步使用七牛云搭建一个属于自己的图床/">用七牛云搭建一个属于自己的图床</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/22/关于“看班娘”不兼容问题-1/">关于“看板娘”不兼容问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="http://www.google.cn/" title target='_blank'
+        >谷歌</a>
+      
+        <a style="display: block;" href="https://orangexx.github.io/" title target='_blank'
+        >胡桃丐丐</a>
+      
+        <a style="display: block;" href="https://www.xiaomujin.club" title target='_blank'
+        >前端木槿</a>
+      
+        <a style="display: block;" href="https://blog.slomoo.cn/" title target='_blank'
+        >Slomoo Blogs</a>
+      
+        <a style="display: block;" href="http://00m00.com/" title target='_blank'
+        >网址导航</a>
+      
+        <a style="display: block;" href="http://pic.yupoo.com/1657614410/ea911ef6/ed17b6e3.jpg" title target='_blank'
+        >联系博主</a>
+      
+        <a style="display: block;" href="http://wpa.qq.com/msgrd?v=3&uin=1657614410&site=qq&menu=yes" title target='_blank'
+        >申请友链</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?abafaafede97983989cb8c6fb8788409";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+</script>
+
+  <div class="foot-box global-width style="display: block ！important;">
+    &copy; 2020 李钢 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;草莓酱欢迎阁下光临(๑´∀`๑)
+   
+	<br>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv";> 草莓酱   告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+
+
+
+</div >
+	
+		
+
+	
+  </div>
+ 
+
+  
+  
+  
+  
+</footer>
+
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共{{ totalcount(site) }}字</span>
+</div>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/个人简历" class="mobile-nav-link">简历</a>
+  
+    <a href="/TV直播" class="mobile-nav-link">TV直播</a>
+  
+    <a href="/心情" class="mobile-nav-link">心情</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+  
+  
+  {% if theme.fireworks %}
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+{% endif %}
+  
+  
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
