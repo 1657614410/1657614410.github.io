@@ -1,0 +1,72 @@
+#weibo-container{
+  width: 100%; 
+  height: 150px;
+  font-size: 95%;
+}
+
+.weibo-new{
+  background:#ff3852
+}
+.weibo-hot{
+  background:#ff9406
+}
+.weibo-jyzy{
+  background:#ffc000
+}
+.weibo-recommend{
+  background:#00b7ee
+}
+.weibo-adrecommend{
+  background:#febd22
+}
+.weibo-friend{
+  background:#8fc21e
+}
+.weibo-boom{
+  background:#bd0000
+}
+.weibo-topic{
+  background:#ff6f49
+}
+.weibo-topic-ad{
+  background:#4dadff
+}
+.weibo-boil{
+  background:#f86400
+}
+#weibo-container{
+  overflow-y:auto;
+  -ms-overflow-style:none;
+  scrollbar-width:none
+}
+#weibo-container::-webkit-scrollbar{
+  display:none
+}
+.weibo-list-item{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  flex-wrap:nowrap
+}
+.weibo-title{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin-right:auto
+}
+.weibo-num{
+  float:right
+}
+.weibo-hotness{
+  display:inline-block;
+  padding:0 6px;
+  transform:scale(.8) translateX(-3px);
+  color:#fff;
+  border-radius:8px
+}
+
+
+作者: 花猪
+链接: https://cnhuazhu.top/butterfly/2022/06/23/Hexo%E9%AD%94%E6%94%B9/Hexo%E4%BE%A7%E8%BE%B9%E6%A0%8F%E6%B7%BB%E5%8A%A0%E5%BE%AE%E5%8D%9A%E7%83%AD%E6%90%9C/
+来源: 花猪のBlog
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

@@ -1,0 +1,10 @@
+body {
+
+  background: -webkit-linear-gradient(left, red, blue)!important;
+
+  background: -o-linear-gradient(right, red, blue)!important;
+
+  background: -moz-linear-gradient(right, red, blue)!important;
+
+  background: linear-gradient(to right, red, blue)!important;
+}
