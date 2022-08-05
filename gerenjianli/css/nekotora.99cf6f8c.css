@@ -6,6 +6,7 @@
     font-style: normal
 }
 
+
 [class*=" icon-"]:before,
 [class^=icon-]:before {
     font-family: nekotora;
@@ -97,4 +98,6 @@
     content: "\f1d6"
 }
 
+
+  
 /*# sourceMappingURL=/nekotora.99cf6f8c.css.map */
