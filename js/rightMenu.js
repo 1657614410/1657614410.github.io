@@ -249,18 +249,18 @@ mr.Mirror = function() {
   let url;
   pathname = window.location.pathname;
   hostname = window.location.hostname;
-  if (hostname === 'www.mrzefr.cn') {
-    url = "https://mrzefr-hexo.vercel.app" + pathname;
-    btf.snackbarShow("即将前往MrZeFr的小窝分站!");
+  if (hostname === 'qxxmx.com') {
+    url = "https://1657614410.github.io" + pathname;
+    btf.snackbarShow("即将前往🧀世界!");
     window.location.href = url;
   }
-  else if(hostname === 'mrzefr-hexo.vercel.app') {
-    url = "https://www.mrzefr.cn" + pathname;
-    btf.snackbarShow("正在返回MrZeFr的小窝！");
+  else if(hostname === '1657614410.github.io') {
+    url = "https://www.qxxmx.com" + pathname;
+    btf.snackbarShow("正在返回🍓世界！");
     window.location.href = url;
   }
   else {
-    btf.snackbarShow("不是正确的域名!");
+    btf.snackbarShow("🎐前方自🧀世界正在维护💻||🍓世界欢迎您的到来💐");
   }
 }
 //关闭右键菜单
