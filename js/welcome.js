@@ -8,7 +8,7 @@ function welcome(){
         title: " 欢迎！",
         text: welcome_text+'\npc/ipad端浏览体验更佳，左小角有音乐可以享用！',//欢迎文本，可自行修改
         imageUrl: "http://xn--yetu62gmga.top/i/2022/08/07/62ef8f4bb5d7e.gif",//图片，自行修改位置
-        timer: 6000,//弹出时间
+        timer: 5000,//弹出时间
         showConfirmButton: false
     });
 }
